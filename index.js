@@ -34,6 +34,7 @@ html5QrCode.start(
 
 function onScanSuccess(decodedText) {
   console.log("QR Code:", decodedText);
+  alert(decodedText);
 }
 
 function onScanFailure(errorMessage) {
