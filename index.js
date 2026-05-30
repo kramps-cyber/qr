@@ -36,7 +36,7 @@ html5QrCode.start(
 function onScanSuccess(decodedText) {
   console.log("QR Code:", decodedText);
   qrinput.value = decodedText;
-  // html5QrCode.stop();
+  html5QrCode.stop();
 }
 
 function onScanFailure(errorMessage) {
