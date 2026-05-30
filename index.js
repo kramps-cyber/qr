@@ -1,4 +1,5 @@
 const html5QrCode = new Html5Qrcode("reader");
+const qrinput = document.getElementsByClassName("form-control")[0];
 
 const config = {
   fps: 10,
@@ -34,7 +35,8 @@ html5QrCode.start(
 
 function onScanSuccess(decodedText) {
   console.log("QR Code:", decodedText);
-  alert(decodedText);
+  qrinput.value = decodedText;
+  // html5QrCode.stop();
 }
 
 function onScanFailure(errorMessage) {
